@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:anto_tom_apk/Screen/Messagescreen.dart';
 import 'package:flutter/material.dart';
@@ -70,6 +71,22 @@ class _LandScreenState extends State<LandScreen> {
           }
         },
       );
+  void showSnackBar(String text) {
+    Scaffold.of(context).showSnackBar(SnackBar(
+      content: Text(text),
+    ));
+  }
+
+  void notify() async {
+    await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+      id: 1,
+      channelKey: "Anto_Tom_Apk",
+      title: "Thank you for sharing food with me",
+      body: " ",
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -183,21 +200,15 @@ class _LandScreenState extends State<LandScreen> {
                             ? pickImage()
                             : await uploadFile().then((value) {
                                 if (value != null) {
+                                  notify();
                                   Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  Messagescreen()))
-                                      .whenComplete(() {
-                                    // final notification =
-                                    //     FlutterLocalNotificationsPlugin();
-                                    // notification.show(
-                                    //     2,
-                                    //     "Anto_Tom_apk",
-                                    //     "Thank You for sharing food with me",
-                                    //     value);
-                                  });
-                                } else {}
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Messagescreen()));
+                                } else {
+                                  showSnackBar("You failed to feed the animal");
+                                }
                               });
                       },
                       child: Container(

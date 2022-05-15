@@ -33,6 +33,7 @@ dependencies:
   google_fonts: ^2.3.2
   firebase_storage: ^10.2.16
   firebase_core: ^1.17.0
+  awesome_notifications: ^0.6.21
   
 
 

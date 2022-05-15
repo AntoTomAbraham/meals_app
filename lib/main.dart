@@ -1,9 +1,22 @@
 import 'package:anto_tom_apk/Screen/Homescreen.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  AwesomeNotifications().initialize(null, [
+    NotificationChannel(
+      channelKey: "Anto_Tom_Apk",
+      channelName: "successfull",
+      channelDescription: "done",
+      defaultColor: Colors.green,
+      ledColor: Colors.white,
+      playSound: false,
+      enableLights: false,
+      enableVibration: true,
+    )
+  ]);
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
