@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310131090139",
+    "project_id": "anto-tom-apk",
+    "storage_bucket": "anto-tom-apk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310131090139:android:69c56c7c52b3dec52c22fe",
+        "android_client_info": {
+          "package_name": "com.example.anto_tom_apk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310131090139-l6tv7sdjpeses3buds9ejkudordt2dhe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqlNhuG7oBO8Ssbm8VRzvVPudwEVDzhBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310131090139-l6tv7sdjpeses3buds9ejkudordt2dhe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

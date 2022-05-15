@@ -1,5 +1,6 @@
 import 'package:anto_tom_apk/Screen/Landscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({Key? key}) : super(key: key);
@@ -26,10 +27,10 @@ class Homescreen extends StatelessWidget {
                     color: Color(0xff3e8b3a),
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  child: const Center(
+                  child: Center(
                       child: Text(
                     "Share your meal",
-                    style: TextStyle(
+                    style: GoogleFonts.andika(
                       fontWeight: FontWeight.w400,
                       fontSize: 25,
                       color: Colors.white,

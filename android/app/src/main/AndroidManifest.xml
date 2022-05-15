@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.anto_tom_apk">
+   <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="anto_tom_apk"
         android:name="${applicationName}"
